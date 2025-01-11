@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Espresso",
+      "image": "https://i.ibb.co.com/0Mh27sG/5.png",
+      "price": 3.00
+    },
+    {
+      "name": "Cappuccino",
+      "image": "https://i.ibb.co.com/H4xc5WL/1.png",
+      "price": 4.50
+    },
+    {
+      "name": "Latte",
+      "image": "https://i.ibb.co.com/1m04jyc/2.png",
+      "price": 4.00
+    },
+    {
+      "name": "Americano",
+      "image": "https://i.ibb.co.com/PcTbxrG/6.png",
+      "price": 3.50
+    },
+    {
+      "name": "Mocha",
+      "image": "https://i.ibb.co.com/XsFPBgc/3.png",
+      "price": 5.00
+    },
+    {
+      "name": "Macchiato",
+      "image": "https://i.ibb.co.com/wyFTrWr/4.png",
+      "price": 4.75
+    }
+  ]
+  

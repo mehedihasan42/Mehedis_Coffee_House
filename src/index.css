@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ranchoRegular {
+  font-family: "Rancho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.raleway{
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
