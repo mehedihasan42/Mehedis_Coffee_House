@@ -37,10 +37,10 @@ const Popular = () => {
     <h2 className=""><span className="font-bold">Name:</span>{item.name}</h2>
     <p><span className="font-bold">Price:</span> {item.price}</p> 
   </div>
-  <div className="card-actions my-auto justify-end grid grid-cols-1">
-      <button className="btn btn-sm btn-primary"><FaEye className="text-2xl "/></button>
-      <button className="btn btn-sm btn-primary"><MdEdit className="text-2xl"/></button>
-      <button className="btn btn-sm btn-primary"><MdDelete className="text-2xl"/></button>
+  <div className="card-actions my-auto justify-end grid grid-cols-1 lg:mr-6">
+      <button className="btn btn-sm bg-[#D2B48C]"><FaEye className="text-2xl text-white"/></button>
+      <button className="btn btn-sm bg-[#3C393B]"><MdEdit className="text-2xl text-white"/></button>
+      <button className="btn btn-sm bg-[#EA4744]"><MdDelete className="text-2xl text-white"/></button>
     </div>
 </div>
             )
