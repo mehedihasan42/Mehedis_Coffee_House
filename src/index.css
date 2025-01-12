@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+h1{
+  color: #374151;
+}
+
 .ranchoRegular {
   font-family: "Rancho", serif;
   font-weight: 400;
