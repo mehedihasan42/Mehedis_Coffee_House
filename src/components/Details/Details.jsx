@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { FaArrowLeft } from 'react-icons/fa';
+import { Link, useParams } from 'react-router';
 
 const Details = () => {
     const {id} = useParams()
@@ -11,7 +12,9 @@ const Details = () => {
    .then(error=>console.error(error))
    },[])
     return (
-        <div className="card card-side w-3/5 mx-auto my-8 bg-base-300 space-x-28 p-24">
+      <div>
+          <button className="btn ranchoRegular font-bold text-lg flex lg:ml-28 lg:mt-8"><Link className="flex" to="/"><FaArrowLeft className="mt-1 mr-1"/>Go To Home</Link></button>
+          <div className="card card-side w-3/5 mx-auto my-8 bg-base-300 space-x-28 p-24">
        <div>
        <figure>
           <img
@@ -31,6 +34,7 @@ const Details = () => {
           <p><span className='font-bold'>supplier:</span> {item?.supplier}</p>
          </div>
         </div>
+      </div>
       </div>
     );
 };

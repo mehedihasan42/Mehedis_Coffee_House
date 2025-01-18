@@ -1,0 +1,63 @@
+[
+    {
+      "name": "Espresso",
+      "chef": "John Doe",
+      "supplier": "Coffee Beans Co.",
+      "taste": "Strong and rich",
+      "category": "Hot Coffee",
+      "details": "A classic Italian coffee brewed by forcing hot water through finely-ground coffee beans.",
+      "image": "https://i.ibb.co.com/zf5pfG7/Cappuccino-at-Sightglass-Coffee.jpg",
+      "price":"45"
+    },
+    {
+      "name": "Cappuccino",
+      "chef": "Jane Smith",
+      "supplier": "Premium Coffee Suppliers",
+      "taste": "Creamy and smooth",
+      "category": "Hot Coffee",
+      "details": "A popular coffee drink made with equal parts espresso, steamed milk, and milk foam.",
+      "image": "https://i.ibb.co.com/H4xc5WL/1.png",
+       "price":"45"
+    },
+    {
+      "name": "Latte",
+      "chef": "Emily Johnson",
+      "supplier": "Barista Blends",
+      "taste": "Mild and creamy",
+      "category": "Hot Coffee",
+      "details": "A coffee drink made with espresso and steamed milk, often topped with a light layer of foam.",
+      "image": "https://i.ibb.co.com/1m04jyc/2.png",
+       "price":"45"
+    },
+    {
+      "name": "Iced Coffee",
+      "chef": "Michael Brown",
+      "supplier": "Cold Brew Supplies",
+      "taste": "Cool and refreshing",
+      "category": "Cold Coffee",
+      "details": "Chilled brewed coffee served over ice, often with added milk or sweeteners.",
+      "image": "https://i.ibb.co.com/XsFPBgc/3.png",
+       "price":"45"
+    },
+    {
+      "name": "Mocha",
+      "chef": "Sarah Davis",
+      "supplier": "Choco Coffee Co.",
+      "taste": "Rich and chocolaty",
+      "category": "Hot Coffee",
+      "details": "A delightful mix of espresso, steamed milk, and chocolate syrup, topped with whipped cream.",
+      "image": "https://i.ibb.co.com/wyFTrWr/4.png",
+       "price":"45"
+    },
+    {
+      "name": "Cold Brew",
+      "chef": "Chris Wilson",
+      "supplier": "Brewed Perfectly",
+      "taste": "Smooth and bold",
+      "category": "Cold Coffee",
+      "details": "Coffee brewed with cold water over an extended period, resulting in a smooth and less acidic flavor.",
+      "image": "https://i.ibb.co.com/H4xc5WL/1.png",
+       "price":"45"
+    }
+  ]
+  

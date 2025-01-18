@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router";
+import Swal from "sweetalert2";
 
 const AddNew = () => {
   const {
@@ -9,6 +10,7 @@ const AddNew = () => {
     handleSubmit,
     watch,
     formState: { errors },
+    reset
   } = useForm();
 
   const onSubmit = (data) => {
@@ -28,6 +30,14 @@ const AddNew = () => {
         taste: data.taste,
       }),
     });
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Item added successfully",
+      showConfirmButton: false,
+      timer: 1500
+    });
+    reset()
   };
 
   return (
@@ -135,7 +145,7 @@ const AddNew = () => {
             </div>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Login</button>
+            <button className="btn bg-[#D2B48C]">Update Coffee Details</button>
           </div>
         </form>
       </div>

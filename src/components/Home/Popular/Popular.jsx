@@ -1,19 +1,51 @@
-import React, { useEffect, useState } from "react";
 import { BsFillCupFill } from "react-icons/bs";
 import { FaEye } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router";
+import useItems from "../../hooks/useItems";
+import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 const Popular = () => {
-  const [items, setItems] = useState();
+  const items = useItems()
+  const [prod,setProd] = useState([])
 
-  useEffect(() => {
-    fetch("http://localhost:5000/items")
-      .then((res) => res.json())
-      .then((data) => setItems(data))
-      .catch((error) => console.error(error));
-  }, []);
+  useEffect(()=>{
+    setProd(items)
+  },[items])
+
+  const handleClick = id =>{
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/items/${id}`,{
+          method:'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          if(data.deletedCount >0){
+            setProd((prevItems) => prevItems.filter((item) => item._id !== id));
+            Swal.fire({
+              title: "Good Luck!",
+              text: "Deleted coffee details",
+              icon: "success"
+            });
+          }
+        })
+        .then(error=>console.error(error))
+      }
+    });
+
+
+  }
 
   return (
     <div className="w-full">
@@ -29,11 +61,11 @@ const Popular = () => {
         </Link>
       </div>
       <div className="grid grid-cols-2 space-y-3">
-        {items?.map((item) => (
-          <div className="card card-side w-96 bg-[#F5F4F1] mx-auto h-48">
-            <figure>
+        {prod?.map((item) => (
+          <div className="card card-side bg-[#F5F4F1] mx-auto w-[384px] h-[192px] flex-shrink-0">
+            <figure className="h-full w-48">
               <img
-                className="justify-start h-48"
+                className="object-cover h-full w-full"
                 src={item.image}
                 alt="Movie"
               />
@@ -52,9 +84,9 @@ const Popular = () => {
                 <Link to={`/details/${item._id}`}><FaEye className="text-2xl text-white"/></Link>
               </button>
               <button className="btn btn-sm bg-[#3C393B]">
-                <MdEdit className="text-2xl text-white" />
+                <Link to={`/edit/${item._id}`}><MdEdit className="text-2xl text-white" /></Link>
               </button>
-              <button className="btn btn-sm bg-[#EA4744]">
+              <button onClick={()=>handleClick(item._id)} className="btn btn-sm bg-[#EA4744]">
                 <MdDelete className="text-2xl text-white" />
               </button>
             </div>
